@@ -1,0 +1,17 @@
+cvm-version: 0.0.20
+ovmf-version: 0.0.2
+cpus: 8
+memory: 32768
+
+shim:
+  domains:
+    - df-demo.model.tinfoil.sh
+  listen-port: 443
+  upstream-port: 8080
+  paths:
+    - /analyze
+    - /health
+
+containers:
+  - name: "df-demo"
+    image: "ghcr.io/tinfoilsh/df-demo:latest"
