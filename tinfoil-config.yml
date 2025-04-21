@@ -11,6 +11,8 @@ shim:
   paths:
     - /analyze
     - /health
+  origins:
+    - https://tinfoil.sh
 
 containers:
   - name: "df-demo"
